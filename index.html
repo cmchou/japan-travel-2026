@@ -315,6 +315,27 @@ body {
 
 /* ── Footer ── */
 .footer { text-align: center; font-size: clamp(10px, 2vw, 11px); color: var(--text-3); padding-top: 14px; border-top: 1px solid var(--gray-border); margin-top: 8px; line-height: 1.6; }
+
+/* ── 手機閱讀字體放大（2026-07-06 加大版）── */
+body { font-size: 16px; }
+.trip-header .sub { font-size: clamp(12.5px, 2.9vw, 14px); }
+.day-heading h2 { font-size: clamp(15px, 3.5vw, 17px); }
+.day-heading p { font-size: clamp(12.5px, 2.7vw, 13.5px); }
+.tm { font-size: clamp(14.5px, 3.2vw, 15.5px); }
+.tn { font-size: clamp(13px, 2.7vw, 14px); }
+.tag { font-size: clamp(10.5px, 2.1vw, 11.5px); }
+.sb-row, .rest-row, .tr-row, .split-item, .opt-body, .spot-details-body, .spot-details summary, .info-row {
+  font-size: clamp(13px, 2.7vw, 14px);
+}
+.spot-details-note { font-size: clamp(11.5px, 2.3vw, 12.5px); }
+.al { font-size: clamp(12.5px, 2.7vw, 13.5px); }
+.footer { font-size: clamp(11px, 2.1vw, 12px); }
+
+/* ── 字體大小調整按鈕（不用教長輩調瀏覽器設定，直接按這個）── */
+.ts-ctrl { position: fixed; right: 14px; bottom: 14px; z-index: 700; display: flex; align-items: center; gap: 2px; background: rgba(17,24,39,.92); border-radius: 999px; padding: 4px; box-shadow: 0 4px 14px rgba(0,0,0,.3); }
+.ts-ctrl button { width: 42px; height: 42px; border: none; border-radius: 50%; background: rgba(255,255,255,.14); color: #fff; font-size: 20px; font-weight: 700; line-height: 1; }
+.ts-ctrl button:active { background: rgba(255,255,255,.32); }
+.ts-ctrl span { color: #fff; font-size: 12px; min-width: 40px; text-align: center; font-weight: 600; }
 </style>
 </head>
 <body>
@@ -323,7 +344,7 @@ body {
 <!-- Trip Header -->
 <div class="trip-header">
   <h1>瀨戶內海家族旅遊　Day 1 – 8</h1>
-  <p class="sub">2026年8月6日（四）出發 ～ 8月13日（四）回台<br>訂位人：CHIENMIN CHOU　｜　輸出：2026-07-06 17:27</p>
+  <p class="sub">2026年8月6日（四）出發 ～ 8月13日（四）回台<br>訂位人：CHIENMIN CHOU　｜　輸出：2026-07-06 17:56</p>
   <div class="pills">
     <span class="pill">✈️ IT714 / IT715 台灣虎航</span>
     <span class="pill">👨‍👩‍👧 共7人</span>
@@ -1350,11 +1371,17 @@ body {
   </div>
 </div>
 
-<div class="footer">瀨戶內海家族旅遊 Day 1–8 行程表｜最後更新：2026-07-06 17:27</div>
+<div class="footer">瀨戶內海家族旅遊 Day 1–8 行程表｜最後更新：2026-07-06 17:56</div>
 
 </div>
 <div class="qr-lightbox" id="qrLightbox">
   <img id="qrLightboxImg" src="" alt="放大檢視">
+</div>
+
+<div class="ts-ctrl" role="group" aria-label="調整文字大小">
+  <button type="button" id="tsMinus" aria-label="縮小文字">－</button>
+  <span id="tsPct">100%</span>
+  <button type="button" id="tsPlus" aria-label="放大文字">＋</button>
 </div>
 
 <script>
@@ -1372,6 +1399,29 @@ function closeQrLightbox(){
 }
 document.getElementById('qrLightbox').addEventListener('click',closeQrLightbox);
 document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeQrLightbox(); });
+
+// 字體大小調整（記住裝置上次選的大小，不用每次都重調）
+(function(){
+  var KEY='tripTextScale';
+  var MIN=1, MAX=1.5, STEP=0.1, DEFAULT=1;
+  var saved=parseFloat(localStorage.getItem(KEY));
+  var scale=(!isNaN(saved) && saved>=MIN && saved<=MAX) ? saved : DEFAULT;
+  var pctEl=document.getElementById('tsPct');
+  function apply(){
+    document.documentElement.style.zoom=scale;
+    pctEl.textContent=Math.round(scale*100)+'%';
+    try{ localStorage.setItem(KEY,scale); }catch(e){}
+  }
+  document.getElementById('tsMinus').addEventListener('click',function(){
+    scale=Math.max(MIN, +(scale-STEP).toFixed(2));
+    apply();
+  });
+  document.getElementById('tsPlus').addEventListener('click',function(){
+    scale=Math.min(MAX, +(scale+STEP).toFixed(2));
+    apply();
+  });
+  apply();
+})();
 </script>
 
 </body>
