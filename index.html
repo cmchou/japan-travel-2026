@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>瀨戶內海家族旅遊 Day 1–8</title>
+<title>瀨戶內海家族旅遊</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
 
@@ -75,6 +75,8 @@ body {
   padding: 3px 10px;
   font-size: clamp(10px, 2vw, 11px);
 }
+a.pill { color: inherit; text-decoration: none; cursor: pointer; }
+a.pill:hover, a.pill:active { background: rgba(255,255,255,.32); }
 
 /* ── Flight cards ── */
 .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
@@ -330,14 +332,20 @@ body {
 
 <!-- Trip Header -->
 <div class="trip-header">
-  <h1>瀨戶內海家族旅遊　Day 1 – 8</h1>
-  <p class="sub">2026年8月6日（四）出發 ～ 8月13日（四）回台<br>訂位人：CHIENMIN CHOU　｜　輸出：2026-07-17 12:52</p>
+  <h1>瀨戶內海家族旅遊</h1>
+  <p class="sub">2026年8月6日（四）出發 ～ 8月13日（四）回台<br>訂位人：CHIENMIN CHOU　｜　輸出：2026-07-17 22:22</p>
   <div class="pills">
     <span class="pill">✈️ IT714 / IT715 台灣虎航</span>
     <span class="pill">👨‍👩‍👧 共7人</span>
     <span class="pill">🚗 Toyota W3 兩段租車</span>
-    <span class="pill">🚲 島波海道 Day4–5</span>
-    <span class="pill">🏝️ 小豆島 Day7</span>
+    <a href="#day1" class="pill">🏯 Day1(8/6)岡山</a>
+    <a href="#day2" class="pill">🏘️ Day2(8/7)倉敷</a>
+    <a href="#day3" class="pill">⛩️ Day3(8/8)廣島</a>
+    <a href="#day4" class="pill">🚲 Day4(8/9)尾道、島波海道</a>
+    <a href="#day5" class="pill">🐬 Day5(8/10)島波海道、今治</a>
+    <a href="#day6" class="pill">🍗 Day6(8/11)高松</a>
+    <a href="#day7" class="pill">🫒 Day7(8/12)小豆島</a>
+    <a href="#day8" class="pill">🎢 Day8(8/13)鷲羽山、回台</a>
   </div>
   <div class="al al-info" style="margin-top:10px"><span>💳</span><span>聯邦吉鶴卡已登記 <b>7～9月 JCB卡別滿10萬送1萬（日幣）</b>活動，此趟旅程消費（含日幣現金以外的刷卡支出）盡量優先用這張卡累積，回國後留意活動核銷/回饋到帳狀況</span></div>
 </div>
@@ -361,7 +369,7 @@ body {
 </div>
 
 <!-- DAY 1 -->
-<div class="day-card">
+<div class="day-card" id="day1">
   <div class="day-header-bar">
     <div class="day-badge" style="background:linear-gradient(160deg,#4f46e5,#3730a3)">
       <div class="d-label">DAY 1</div><div class="d-date">8/6</div><div class="d-week">週四</div>
@@ -443,7 +451,7 @@ body {
 </div>
 
 <!-- DAY 2 -->
-<div class="day-card">
+<div class="day-card" id="day2">
   <div class="day-header-bar">
     <div class="day-badge" style="background:linear-gradient(160deg,#166534,#15803d)">
       <div class="d-label">DAY 2</div><div class="d-date">8/7</div><div class="d-week">週五</div>
@@ -591,7 +599,7 @@ body {
 </div>
 
 <!-- DAY 3 -->
-<div class="day-card">
+<div class="day-card" id="day3">
   <div class="day-header-bar">
     <div class="day-badge" style="background:linear-gradient(160deg,#b91c1c,#991b1b)">
       <div class="d-label">DAY 3</div><div class="d-date">8/8</div><div class="d-week">週六</div>
@@ -755,7 +763,7 @@ body {
 </div>
 
 <!-- DAY 4 -->
-<div class="day-card">
+<div class="day-card" id="day4">
   <div class="day-header-bar">
     <div class="day-badge" style="background:linear-gradient(160deg,#0a6045,#0d7a58)">
       <div class="d-label">DAY 4</div><div class="d-date">8/9</div><div class="d-week">週日</div>
@@ -934,7 +942,7 @@ body {
 </div>
 
 <!-- DAY 5 -->
-<div class="day-card">
+<div class="day-card" id="day5">
   <div class="day-header-bar">
     <div class="day-badge" style="background:linear-gradient(160deg,#9a3412,#b45309)">
       <div class="d-label">DAY 5</div><div class="d-date">8/10</div><div class="d-week">週一</div>
@@ -1125,7 +1133,7 @@ body {
 </div>
 
 <!-- DAY 6 -->
-<div class="day-card">
+<div class="day-card" id="day6">
   <div class="day-header-bar">
     <div class="day-badge" style="background:linear-gradient(160deg,#164e8a,#1d4ed8)">
       <div class="d-label">DAY 6</div><div class="d-date">8/11</div><div class="d-week">週二</div>
@@ -1184,6 +1192,7 @@ body {
               <div class="rest-row"><span class="rest-rank">🥈</span><span><b><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=%E6%89%8B%E6%89%93%E3%81%86%E3%81%A9%E3%82%93%20%E6%A4%8D%E7%94%B0%20%E9%AB%98%E6%9D%BE" target="_blank" rel="noopener">手打うどん 植田<span class="gmap-pin">📍</span></a></b>　玉藻公園南側步行3分，讚岐烏龍麵¥460<br>2009年開業，位在高松城跡南側的辦公商圈，老闆刻意做成粗細不均、看似業餘手打的麵條，追求復古直白的讚岐烏龍麵原味；招牌肉うどん・肉ぶっかけ選用燉煮軟嫩的牛肉，甜鹹湯汁與麵條意外對味，是上班族的口袋名店。</span></div>
               <div class="rest-row"><span class="rest-rank">🥉</span><span><b><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=%E7%8E%89%E8%97%BB%E3%81%86%E3%81%A9%E3%82%93%20%E9%AB%98%E6%9D%BE" target="_blank" rel="noopener">玉藻うどん<span class="gmap-pin">📍</span></a></b>　緊鄰高松港，步行5分，一邊看瀬戸内海一邊用餐<br>僅有吧檯座位的小店，隔著吧檯就能看到職人現場打麵、下鍋煮麵，充滿本場讚岐烏龍麵的懷舊氣氛；麵條Q彈滑順，招牌「天ぷらぶっかけ」與「讃岐和牛肉ぶっかけ」都是人氣品項。⚠️ 每週三、四公休，8/11（週二）造訪不受影響。</span></div>
               <div class="rest-row"><span class="rest-rank">4️⃣</span><span><b><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=%E3%82%81%E3%82%8A%E3%81%91%E3%82%93%E3%82%84%20%E9%AB%98%E6%9D%BE%E9%A7%85%E5%89%8D%E5%BA%97" target="_blank" rel="noopener">めりけんや 高松駅前店<span class="gmap-pin">📍</span></a></b>　JR高松駅南口徒步1分<br>JR四國關係企業經營、動線清楚好上手的自助式烏龍麵店，早上7點就開門，適合搭配交通時段順路用餐；選用嚴選小麥粉、瀬戶內海鹽與軟水製麵，蔥花與炸麵渣配料免費自取，麵條嚼勁深受好評。</span></div>
+              <div class="rest-row"><span class="rest-rank">5️⃣</span><span><b><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=%E3%81%8A%E3%82%84%E3%82%8F%E3%81%8B%E9%AB%98%E6%9D%BE%E5%BA%97" target="_blank" rel="noopener">おやわか高松店<span class="gmap-pin">📍</span></a></b>　想吃骨付鳥的話選這間，リーガホテルゼスト高松1F（古新町9-1），📞 087-897-3622，琴電片原町駅步行10分<br>骨付鳥ランチセット¥990起（含とりめし・湯・小鉢）。<b>官方樂天ぐるなび頁面查證的完整營業時間</b>：週一・二・四〜日、假日前一天、國定假日　午餐11:00–14:00（L.O.13:45）；週三定休（但「祝日は営業、翌日は休業」）。8/11同時是週二＋山の日國定假日，兩個條件都落在營業範圍內，午餐穩定供應到L.O.13:45，不用擔心公休。<br><b>💡 不用特地訂位，直接現場去即可</b>：查證這間店唯一的線上訂位管道（楽天ぐるなび）只是「リクエスト予約」（請求式，非即時確認，需店家審核回覆）且人數上限只到6人，我們7人本來就訂不了；這其實反映它是一間走現場點餐邏輯的定食店（62個座位，一般桌菜形式，不是需要事前排菜單的高級餐廳），線上訂位只是輔助功能非必要手段，直接現場去用餐最簡單，不用打電話也不用線上訂位。<br><span style="color:#b91c1c">⚠️ 若抓13:30左右抵達，離L.O.13:45只剩約15分鐘緩衝，建議提早到13:15–13:20左右，避免現場等位子、併桌（7人需併桌，桌型為1–2人×3卓／3–4人×4卓／3–6人×1卓）或點餐時間卡到最後點餐。</span></span></div>
             </div>
           </div>
         </details>
@@ -1237,10 +1246,10 @@ body {
           <div class="spot-details-body">
             <div class="spot-details-note">💡 <b>晚餐已定Grill Plancha，中午想吃骨付鳥的話，找到一間可以確定吃得到的：おやわか高松店</b>（見下方🥇）。官網明確寫「定休日：水曜日、<b>祝日は営業、翌日は休業</b>」——直接證實了先前對一鶴的假設模式（國定假日照常營業）在這間店是真的，而且8/11是週二本來就不是它的公休日，所以不需要賭假日例外，直接就是正常營業日，11:00–14:00（L.O.13:45）穩定供應骨付鳥午餐（¥990起）。寄鳥味鳥全年只做晚餐，中午確定吃不到；一鶴8/11是否營業仍不確定，若行程有餘裕想順便驗證一鶴的假日規則可以再打電話問，但**不用再靠它才能吃到骨付鳥午餐**了。</div>
             <div class="rest-box"><div class="rest-title">🍽️ 晚餐：Grill Plancha（已決定）</div>
-              <div class="rest-row"><span class="rest-rank">✅</span><span><b><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=Grill%20Plancha%20%E9%AB%98%E6%9D%BE" target="_blank" rel="noopener">Grill Plancha<span class="gmap-pin">📍</span></a></b>　香川橄欖牛鐵板燒，丸亀町商店街內（スミレビル2F），📞 087-822-8525、11:30–14:00・17:00–22:30（L.O.22:00）<br>主打香川特產「讚岐橄欖牛」鐵板料理，將吃橄欖渣長大的和牛以鐵板現煎呈現，肉質油花均勻、風味清甜不膩。<b>已確認8/11可訂位</b>：用戶在Hot Pepper上實測8/11 18:30可直接線上訂位（<a href="https://www.hotpepper.jp/strJ004558576/course_cnod41/rpn7/?RDT=20260811&RTM=1830" target="_blank" rel="noopener">訂位連結</a>），官方訂位月曆上8/11標示「◎即予約可」——推測是因為8/11是山の日國定假日，蓋過官網文字寫的「火曜日」定休安排（8月其他非假日週二4、18、25日月曆上仍顯示「休」可佐證）。可只預約「席のみのご予約」單純訂位子、現場單點；只有「鉄板焼きコースS」（¥12,000）明確要求前一天預約。<b>出發前務必實際上網完成訂位，確保18:30有位。</b></span></div>
+              <div class="rest-row"><span class="rest-rank">✅</span><span><b><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=Grill%20Plancha%20%E9%AB%98%E6%9D%BE" target="_blank" rel="noopener">Grill Plancha<span class="gmap-pin">📍</span></a></b>　香川橄欖牛鐵板燒，丸亀町商店街內（スミレビル2F），📞 087-822-8525、11:30–14:00・17:00–22:30（L.O.22:00）<br>主打香川特產「讚岐橄欖牛」鐵板料理，將吃橄欖渣長大的和牛以鐵板現煎呈現，肉質油花均勻、風味清甜不膩。<b>已確認8/11可訂位</b>：用戶在Hot Pepper上實測8/11 18:30可直接線上訂位（<a href="https://www.hotpepper.jp/strJ004558576/course_cnod41/rpn7/?RDT=20260811&RTM=1830" target="_blank" rel="noopener">訂位連結</a>），官方訂位月曆上8/11標示「◎即予約可」——推測是因為8/11是山の日國定假日，蓋過官網文字寫的「火曜日」定休安排（8月其他非假日週二4、18、25日月曆上仍顯示「休」可佐證）。可只預約「席のみのご予約」單純訂位子、現場單點；只有「鉄板焼きコースS」（¥12,000）明確要求前一天預約。<b>出發前務必實際上網完成訂位，確保18:30有位。</b>　<span style="color:#b91c1c">⚠️ 注意勿與姊妹店「Grill à Table（グリル ア ターブル）」搞混——同一老闆，但地址不同（Grill à Table在鍛冶屋町4-1フェスタ2 2F，087-826-2627），Google Maps會搜出兩間，訂位務必確認是丸亀町11-3スミレビル2F這間（Hot Pepper店家ID已核對確認一致，不會訂錯）。座位可併桌至8人一排，7人剛好坐同一桌，非包廂。<br><b>💡 兩間比較</b>：評價食べログGrill Plancha 3.56分（189則）／Grill à Table 3.59分（評論較少，且入選「食べログ鉄板焼きWEST百名店2024」），兩者評價相近、à Table略高一點點。橄欖牛特色則是<b>Grill Plancha更突出</b>——主打「金ラベル牝オリーブ牛」，只選血統優良的母牛整頭採購，イチボ・フィレ・サーロイン等稀少部位才有得吃；Grill à Table人氣菜色偏向黑毛和牛菲力、北海道香菇、鮮鮑魚等多元食材，橄欖牛不是唯一主打，特色故事沒那麼鮮明。兩間皆可線上訂位（à Table用楽天ぐるなび，📞050-5487-3361）。想吃到香川招牌橄欖牛體驗，Grill Plancha仍是較佳選擇，維持原訂位計畫。</span></span></div>
             </div>
             <div class="rest-box" style="margin-top:8px"><div class="rest-title">🍗 若想中午/改吃骨付鳥（不只寄鳥味鳥跟一鶴，另有第三間）</div>
-              <div class="rest-row"><span class="rest-rank">🥇</span><span><b><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=%E3%81%8A%E3%82%84%E3%82%8F%E3%81%8B%E9%AB%98%E6%9D%BE%E5%BA%97" target="_blank" rel="noopener">おやわか高松店<span class="gmap-pin">📍</span></a></b>　骨付鳥專門店，リーガホテルゼスト高松1F（古新町9-1），📞 087-897-3622，琴電片原町駅步行10分<br><b>午餐11:00–14:00（L.O.13:45）＋晚餐17:00–22:00（L.O.21:30），中午確定吃得到骨付鳥！</b>骨付鳥ランチセット¥990起（含とりめし・湯・小鉢），晚餐另有骨付鳥コース¥4,950起（需3個營業日前預約，單點不用）。傳承自昭和49年創業、已於2024年8月結束營業的丸亀名店「藤ちゃん」的味道，若鳥（わか）軟嫩多汁適合小孩與初次嘗試者、親鳥（おや）鹹香有嚼勁；<b>定休日：水曜日（祝日は営業、翌日は休業）</b>，8/11是週二，不是公休日也不用賭假日例外，正常開，是目前唯一能確定中午吃到骨付鳥的選項。有個室（座敷），適合帶小孩的家庭。</span></div>
+              <div class="rest-row"><span class="rest-rank">🥇</span><span><b><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=%E3%81%8A%E3%82%84%E3%82%8F%E3%81%8B%E9%AB%98%E6%9D%BE%E5%BA%97" target="_blank" rel="noopener">おやわか高松店<span class="gmap-pin">📍</span></a></b>　骨付鳥專門店，中午確定吃得到骨付鳥，晚餐另有骨付鳥コース¥4,950起（需3個營業日前預約，單點不用）。<b>完整營業時間、訂位方式與注意事項已整理在13:20午餐段落（本頁高松中餐5️⃣選項），這裡不重複贅述，可捲動上去查看。</b></span></div>
               <div class="rest-row"><span class="rest-rank">🥈</span><span><b><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=%E5%AF%84%E9%B3%A5%E5%91%B3%E9%B3%A5%20%E9%AB%98%E6%9D%BE" target="_blank" rel="noopener">寄鳥味鳥（よりどりみどり）<span class="gmap-pin">📍</span></a></b>　骨付鳥人氣老店，1986年創業，兵庫町商店街拱廊內　17:00–22:00（L.O.21:30，<b>只有晚餐</b>）　只公休週一，8/11週二✅正常營業<br>「若どり」「親どり」兩種雞肉皆選用當日現宰新鮮雞隻，比起一鶴調味相對溫和不死鹹，特別適合女性與小孩享用。<b>🔴上一版把店名誤植為「寄りどり緑」，正確全名是「寄鳥味鳥」，已修正。</b></span></div>
               <div class="rest-row"><span class="rest-rank">🥉</span><span><b><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=%E4%B8%80%E9%B6%B4%20%E9%AB%98%E6%9D%BE%E5%BA%97" target="_blank" rel="noopener">一鶴 高松店<span class="gmap-pin">📍</span></a></b>　骨付鳥創始老店<br>1953年由創始人夫妻受好萊塢電影裡的烤雞啟發研發，是骨付鳥的發源老店，招牌分成「おやどり」與「ひなどり」兩種。<b>⚠️8/11是否營業／是否有午餐都不確定</b>，官網／樂天ぐるなび都寫定休日「毎火曜日」，8/11是山の日國定假日是否比照おやわか的假日例外規則無法從網路資料確認。<b>現在中午已有おやわか可以確定吃到骨付鳥，這間可以當作單純想朝聖發源老店才需要打087-823-3711確認，不是必要選項。</b></span></div>
               <div class="rest-row"><span class="rest-rank">🏅</span><span><b><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=%E9%89%84%E6%9D%BF%E7%84%BC%E3%81%8D%20WEST%20%E9%AB%98%E6%9D%BE" target="_blank" rel="noopener">鉄板焼き WEST<span class="gmap-pin">📍</span></a></b>　食べログ百名店2025<br>連續入選食べログ百名店的鐵板燒名店，同樣以香川橄欖牛與新鮮海鮮為賣點。⚠️ 定休日網路查無資料，若想改吃這間務必先電話或Google Maps確認是否有開。</span></div>
@@ -1264,7 +1273,7 @@ body {
 </div>
 
 <!-- DAY 7 -->
-<div class="day-card">
+<div class="day-card" id="day7">
   <div class="day-header-bar">
     <div class="day-badge" style="background:linear-gradient(160deg,#7a1a48,#9b2563)">
       <div class="d-label">DAY 7</div><div class="d-date">8/12</div><div class="d-week">週三</div>
@@ -1340,7 +1349,7 @@ body {
 </div>
 
 <!-- DAY 8 -->
-<div class="day-card">
+<div class="day-card" id="day8">
   <div class="day-header-bar">
     <div class="day-badge" style="background:linear-gradient(160deg,#5b52c8,#3730a3)">
       <div class="d-label">DAY 8</div><div class="d-date">8/13</div><div class="d-week">週四</div>
@@ -1462,7 +1471,7 @@ body {
   </div>
 </div>
 
-<div class="footer">瀨戶內海家族旅遊 Day 1–8 行程表｜最後更新：2026-07-17 12:52</div>
+<div class="footer">瀨戶內海家族旅遊 行程表｜最後更新：2026-07-17 22:22</div>
 
 </div>
 <div class="qr-lightbox" id="qrLightbox">
